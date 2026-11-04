@@ -43,10 +43,11 @@ namespace RazorPage_Vali_assignment.Repo
 			return new List<Car>(_cars);
 		}
 
-		public void Delete(int id)
+		public Car Delete(int id)
 		{
 			Car CarToRemove = GetById(id);
 			_cars.Remove(CarToRemove);
+			return CarToRemove;
 		}
 
 		public Car Update(Car car)

@@ -10,62 +10,62 @@
 	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 	<div class="mb-3">
-		<label asp-for="car.Id" class="form-label"></label>
-		<input asp-for="car.Id" class="form-control" />
-		<span asp-validation-for="car.Id" class="text-danger"></span>
+		<label asp-for="@Model.Id" class="form-label"></label>
+		<input asp-for="@Model.Id" class="form-control" />
+		<span asp-validation-for="@Model.Id" class="text-danger"></span>
 	</div>
 
 	<div class="mb-3">
-		<label asp-for="car.Vendor" class="form-label"></label>
-		<input asp-for="car.Vendor" class="form-control" />
-		<span asp-validation-for="car.Vendor" class="text-danger"></span>
+		<label asp-for="@Model.Vendor" class="form-label"></label>
+		<input asp-for="@Model.Vendor" class="form-control" />
+		<span asp-validation-for="@Model.Vendor" class="text-danger"></span>
 	</div>
 
 	<div class="mb-3">
-		<label asp-for="car.Model" class="form-label"></label>
-		<input asp-for="car.Model" class="form-control" />
-		<span asp-validation-for="car.Model" class="text-danger"></span>
+		<label asp-for="@Model.Model" class="form-label"></label>
+		<input asp-for="@Model.Model" class="form-control" />
+		<span asp-validation-for="@Model.Model" class="text-danger"></span>
 	</div>
 
 	<div class="mb-3">
-		<label asp-for="car.Color" class="form-label"></label>
-		<input asp-for="car.Color" class="form-control" />
-		<span asp-validation-for="car.Color" class="text-danger"></span>
+		<label asp-for="@Model.Color" class="form-label"></label>
+		<input asp-for="@Model.Color" class="form-control" />
+		<span asp-validation-for="@Model.Color" class="text-danger"></span>
 	</div>
 
 	<div class="mb-3">
-		<label asp-for="car.Odometer" class="form-label"></label>
-		<input asp-for="car.Odometer" class="form-control" />
-		<span asp-validation-for="car.Odometer" class="text-danger"></span>
+		<label asp-for="@Model.Odometer" class="form-label"></label>
+		<input asp-for="@Model.Odometer" class="form-control" />
+		<span asp-validation-for="@Model.Odometer" class="text-danger"></span>
 	</div>
 
 	<div class="mb-3">
-		<label asp-for="car.EngineKind" class="form-label"></label>
-		<input asp-for="car.EngineKind" class="form-control" />
-		<span asp-validation-for="car.EngineKind" class="text-danger"></span>
+		<label asp-for="@Model.EngineKind" class="form-label"></label>
+		<input asp-for="@Model.EngineKind" class="form-control" />
+		<span asp-validation-for="@Model.EngineKind" class="text-danger"></span>
 	</div>
 
 	<div class="mb-3">
-		<label asp-for="car.EnginePower" class="form-label"></label>
-		<input asp-for="car.EnginePower" class="form-control" />
-		<span asp-validation-for="car.EnginePower" class="text-danger"></span>
+		<label asp-for="@Model.EnginePower" class="form-label"></label>
+		<input asp-for="@Model.EnginePower" class="form-control" />
+		<span asp-validation-for="@Model.EnginePower" class="text-danger"></span>
 	</div>
 
 	<div class="mb-3">
-		<label asp-for="car.Doors" class="form-label"></label>
-		<input asp-for="car.Doors" class="form-control" />
-		<span asp-validation-for="car.Doors" class="text-danger"></span>
+		<label asp-for="@Model.Doors" class="form-label"></label>
+		<input asp-for="@Model.Doors" class="form-control" />
+		<span asp-validation-for="@Model.Doors" class="text-danger"></span>
 	</div>
 
 	<div class="form-check mb-3">
-		<input asp-for="car.Towbar" class="form-check-input" />
-		<label asp-for="car.Towbar" class="form-check-label"></label>
+		<input asp-for="@Model.Towbar" class="form-check-input" />
+		<label asp-for="@Model.Towbar" class="form-check-label"></label>
 	</div>
 
 	<div class="mb-3">
-		<label asp-for="car.Year" class="form-label"></label>
-		<input asp-for="car.Year" class="form-control" />
-		<span asp-validation-for="car.Year" class="text-danger"></span>
+		<label asp-for="@Model.Year" class="form-label"></label>
+		<input asp-for="@Model.Year" class="form-control" />
+		<span asp-validation-for="@Model.Year" class="text-danger"></span>
 	</div>
 
 	<button type="submit" class="btn btn-primary">Create</button>

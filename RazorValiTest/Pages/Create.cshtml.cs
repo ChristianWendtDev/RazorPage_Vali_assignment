@@ -1,5 +1,6 @@
 
 using System.ComponentModel.DataAnnotations;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,18 +11,26 @@ namespace RazorValiTest.Pages
 {
 	public class CreateModel : PageModel
 	{
-		private CarRepo _repo;
+		private readonly CarRepo _repo;
 
-		// This constructor assumes you are initializing your repo 
-		// (either via Dependency Injection or manually)
 		public CreateModel(CarRepo repo)
 		{
 			_repo = repo;
 		}
 
-		// This attribute connects the form fields to this object
+		public int Id { get; set; }
 		[BindProperty]
-		public Car car { get; set; }
+		[Required(ErrorMessage = "Vendor is required")]
+		public string Vendor { get; set; }
+		public string Model { get; set; }
+		public string Color { get; set; }
+		public int Odometer { get; set; }
+		public int EngineKind { get; set; }
+		public int EnginePower { get; set; }
+		public int Doors { get; set; }
+		public bool Towbar { get; set; }
+		public int Year { get; set; }
+
 
 		public void OnGet()
 		{
@@ -34,9 +43,12 @@ namespace RazorValiTest.Pages
 			{
 				return Page();
 			}
-
-			_repo.Create(car);
-			return RedirectToPage("Index");
+			Car newCar = new Car (Id, Vendor, Model, Color, Odometer, EngineKind, EnginePower, Doors, Towbar, Year);
+			newCar = _repo.Create(newCar);
+			return RedirectToPage("(Index)");
+			{
+				
+			};
 
 		}
 
